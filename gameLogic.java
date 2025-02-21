@@ -63,10 +63,7 @@ class gameLogic
 
         s = null;
 
-        for(int j = 0; j<3;j++)
-        {
-            System.out.println("Ships are : "+ships.get(j).locations);
-        }
+        
         
         
 
