@@ -27,11 +27,10 @@ class battleship
             innerloop:
             for(int j = 0 ; j < ships.size() ; j++)
             {
-                for(int i = 0; i<ships.get(j).locations.size();i++)
-                {
-                    if(us.guess.equals(ships.get(j).locations.get(i)))
+                int index = ships.get(j).locations.indexOf(us.guess);
+                    if(index >= 0)
                     {
-                        ships.get(j).locations.remove(i);
+                        ships.get(j).locations.remove(index);
                         hit = true;
                         if(ships.get(j).locations.isEmpty())
                         {
@@ -57,7 +56,7 @@ class battleship
                         }
 
                     }
-                }
+                
             }
             if(hit==false)
             {
