@@ -39,7 +39,7 @@ class battleship
                             ships.remove(j);
                             if(ships.isEmpty())
                             {
-                                
+                                System.out.println("KILLED "+ name);
                                 System.out.println("You won!");
                                 break loop;
                             }

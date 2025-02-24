@@ -58,6 +58,10 @@ class gameLogic
                 {
                     shipSame = g.areTheShipsSame(ships.get(i), ships.get(j));
                 }
+                if(shipSame=true)
+                {
+                    ships.remove(i);
+                }
             }
         }
 

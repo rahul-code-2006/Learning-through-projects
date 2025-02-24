@@ -7,7 +7,7 @@ class ship
     ArrayList <String> locations = new ArrayList<String>();
     gameLogic g = new gameLogic();
     int length;
-    int hits;
+    
 
     // methods
     
@@ -29,12 +29,11 @@ class ship
     {
         
         // alignment if horizontal or vertical
-        int alignment=2;
-        while(alignment==2)
-        {
-            alignment = (int)(Math.random()*2);
-        }
-        if(alignment==1)
+        int alignment = (int)(Math.random()*10);;
+        
+        
+        
+        if(alignment<5)
         {
             //horizontal alignment
             int alphaNum = (int)(Math.random()*6);
@@ -68,13 +67,7 @@ class ship
     
     }
     
-    void getLocation()
-    {
-        for(int i = 0; i<length;i++)
-        {
-            System.out.println(locations.get(i));
-        }
-    }
+    
     
     
 }
