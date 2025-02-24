@@ -7,14 +7,14 @@ class gameLogic
     
     
     // Converts number to alphabet
-    String getAlpha(int alphaNum)
+    static String getAlpha(int alphaNum)
     {
         char []c= "ABCDEFG".toCharArray();
         return Character.toString(c[alphaNum]);
     }
     
     // Checks if the ships are same
-    boolean areTheShipsSame(ship s1, ship s2)
+    static boolean areTheShipsSame(ship s1, ship s2)
     {
             for(int i =  0; i < s2.length ; i++)
             {
@@ -30,7 +30,7 @@ class gameLogic
 
     // Generate 3 ships
 
-    ArrayList <ship> buildShips()
+    static ArrayList <ship> buildShips()
     {
         ArrayList <ship> ships = new ArrayList<ship>(3);
         boolean shipSame = true;
@@ -56,7 +56,7 @@ class gameLogic
                 shipSame=false;
                 for(int j = 0 ; j<i;j++)
                 {
-                    shipSame = g.areTheShipsSame(ships.get(i), ships.get(j));
+                    shipSame = gameLogic.areTheShipsSame(ships.get(i), ships.get(j));
                 }
                 if(shipSame=true)
                 {
