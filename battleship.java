@@ -7,13 +7,11 @@ class battleship
     {
         //Declaring variables
         
-        gameLogic g = new gameLogic();
+        
         user us = new user();
         Scanner sc = new Scanner(System.in);
-        ArrayList <ship> ships = new ArrayList<ship>(3);
+        ArrayList <ship> ships = gameLogic.buildShips();
         
-        //generate 3 ships
-        ships = g.buildShips();
 
         //User makes a guess
         loop:

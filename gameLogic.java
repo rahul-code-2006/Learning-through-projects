@@ -34,38 +34,32 @@ class gameLogic
     {
         ArrayList <ship> ships = new ArrayList<ship>(3);
         boolean shipSame = true;
-        ship s[]=new ship[3];
-        
-        gameLogic g = new gameLogic();
+     
         
         
-        for(int i = 0 ; i < 3;i++)
-        {
-            s[i]=new ship();
-        }
+        
         
         for(int i = 0 ; i < 3 ; i++)
         {
+            ship s = new ship();
             shipSame = true;
             while(shipSame)
             {
-                ships.add(s[i]);
-                ships.get(i).setLength();
-                ships.get(i).setName(("Ship "+(i+1)));
-                ships.get(i).setLocation();
+                ships.add(s);
+                ships.get(i).createShip(("Ship "+(i+1)));
                 shipSame=false;
                 for(int j = 0 ; j<i;j++)
                 {
                     shipSame = gameLogic.areTheShipsSame(ships.get(i), ships.get(j));
                 }
-                if(shipSame=true)
+                if(shipSame==true)
                 {
                     ships.remove(i);
                 }
             }
         }
 
-        s = null;
+        
 
         
         
